@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu > li{
+            display: inline-block;      
+        }
+       .menu ul{
+        display: none;
+        position: absolute;
+       }
+      .menu li{
+        position: relative;
+      }
+    
+        .menu li:hover >ul{
+            display: inline-block;
+        }
+       ul{
+        margin: 0;
+        padding: 0;
+        white-space:nowrap ;
+       } 
+       li ul{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+       }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>文件
+           <ul>
+             <li>新建文本文件 
+                 <span>ctrl+N</span>
+             </li>
+             <li class="sp"></li>
+             <li>新建文件<span>ctrl+o</span></li>
+             <li>新建窗口<span>ctrl+shift+N</span></li>
+             <li>打开文件<span>ctrl+O</span></li>
+             <li>打开文件夹<span>ctrl+K</span></li>
+             <li>打开最近的文件
+                 <ul>
+                     <li>2222</li>
+                     <li>1111</li>
+                     <li>3333</li>
+                 </ul>
+             </li>
+             <li>从文件打开工作区</li>
+           </ul>
+        </li>
+        <li>编辑
+         <ul>
+             <li>撤销</li>
+             <li>恢复</li>
+             <li>剪切</li>
+         </ul>
+        </li>
+        <li>选择</li>
+        <li>查看</li> 
+     </ul>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        
+         div{
+            position: relative;
+            display: inline-block;
+            border: 2px solid;
+
+         }
+        
+        
+        ul{
+            
+            white-space: nowrap;
+            background-color: black;
+            color:white;
+            position: absolute;
+            padding: 0;
+            display:  none;
+            margin: 0;
+        }
+        ul ul {
+            position: absolute;
+            top: 0;
+            left:100% ;
+        }
+        div:hover > ul {
+            display: block;
+
+
+        }
+        li{
+            position: relative;
+
+        }
+        li:hover {
+            background-color: pink;
+        }
+        li:hover > ul{
+            display: block;
+        }
+        li ul{
+            background-color: aqua;
+            padding: 0;
+            list-style: none;
+
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div>文件(F)
+        <ul>
+            <li>新建文本文件</li>
+            <li>新建文件</li>
+            <li>新建窗口</li><hr>
+            <li>打开文件</li>
+            <li>打开文件夹</li>
+            <li>从文件打开工作区</li>
+            <li>打开最近文件
+                <ul>
+                <li>133333</li>
+                <li>233333</li>
+                <li>333333</li>
+                </ul>
+            </li><hr>         
+            <li>将文件夹添加到工作区</li>
+            <li>将工作区另存为</li>
+            <li> 复制工作区</li><hr>
+            <li>保存</li>
+            <li>另存为</li>
+            <li>全部保存</li><hr>
+            <li>共享</li><hr>
+            <li>自动保存</li>
+            <li>首选项</li><hr>
+            <li>还原文件</li>
+            <li>关闭编辑器</li>
+            <li>关闭文件夹</li>
+            <li>关闭窗口</li><hr>
+            <li>退出</li>
+        </ul>
+    </div>
+</body>
+</html>
