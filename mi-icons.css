@@ -1,0 +1,22 @@
+        @font-face {
+            font-family: 图标字体;
+            src: url(mi-iconfont.ttf);
+        }
+        .icon {
+            font-family: 图标字体;
+        }
+        .icon-shopping-cart::before {
+            content: '\e60c';
+        }
+        .icon-search::before {
+            content: '\e616';
+        }
+        .icon-shopping-cart::before {
+            content: '\e60c';
+        }
+        .icon-7::before {
+            content: '\e635';
+        }
+        .icon-shopping-cart::before {
+            content: '\e60c';
+        }

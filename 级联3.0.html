@@ -6,29 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            background-color: rgba(0,0,0,0.1);
+        }
         .menu > li{
+            /* 让第一层的li横向排列 */
             display: inline-block;      
         }
        .menu ul{
         display: none;
         position: absolute;
+
+        /* 让第二层的ul起点对其父元素左下角 */
+        top:100%;
+        left: 0;
+
+       }
+       .menu ul ul{
+        /* 让第三层的ul起点对齐父元素右上角 */
+        top: 0;
+        left: 100%;
        }
       .menu li{
+        /* 让每一个菜单项成为定位祖先，因为其子菜单相对它定位 */
         position: relative;
       }
     
+
+      /* 被hover的菜单项子菜单出现 */
         .menu li:hover >ul{
-            display: inline-block;
+
+            display: block;
         }
        ul{
+/* 去掉所有ul的默认样式 */
         margin: 0;
         padding: 0;
+        /* 去掉点 */
+        list-style: none;
+
+/* 让文字不折行 */
         white-space:nowrap ;
        } 
        li ul{
+        /* 相对于其父元素定位 */
         position: absolute;
         top: 10px;
         left: 10px;
+       }
+      .menu li li{
+        padding-right: 60px;
+      }
+
+       .menu li li span,
+       .menu li li::after{
+        content: attr(data-shortcut);/*  让after伪元素的内容为父元素data-shortcut属性的值  */
+        position: absolute;
+        right: 10px;
        }
     </style>
 </head>
@@ -40,11 +74,11 @@
                  <span>ctrl+N</span>
              </li>
              <li class="sp"></li>
-             <li>新建文件<span>ctrl+o</span></li>
+             <li data-shortcut="ctrl+o">新建文件</li>
              <li>新建窗口<span>ctrl+shift+N</span></li>
-             <li>打开文件<span>ctrl+O</span></li>
+             <li data-shortcut="ctrl+O">打开文件</li>
              <li>打开文件夹<span>ctrl+K</span></li>
-             <li>打开最近的文件
+             <li data-shortcut=">">打开最近的文件
                  <ul>
                      <li>2222</li>
                      <li>1111</li>
