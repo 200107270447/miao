@@ -18,6 +18,59 @@
     console.log( x%400===0 ||(x%4==0 && x%100!==0) ) // 输出x做为年份时，是否为闰年，是输出true，不是输出false，闰年的定义请自行查询
     console.log( x==2 || x==3 ||x==5 ||x==7|| x%2!=0 && x%3!=0 && x%5!=0 && x%7!=0 ) // 输出x是否为素数（此时x范围为100以内）
     
+
     </script>
 
-    
+    <script>
+        var x = 0
+        var a = 1
+        var b = 1
+        var c = 1
+        var d = 1
+        var e = 1
+        var f = 1
+        var g = 1
+        var h = 1
+        for(var i = 0; i < 9999; i = i + 1){
+            dot(x++,y,"pink")
+            var y = 5 * x + 7
+            dot(a++,A,"black")
+            var A = 6 * a + 5
+            dot(b++,B,"black")
+            var B = 7 * b + 5
+            dot(c++,C,"black")
+            var C = 8 * c + 5
+            dot(d++,D,"black")
+            var D = 9 * d + 5
+            dot(e++,E,"black")
+            var E = 10 * e + 5
+            dot(f++,F,"black")
+            var F = 11 * f + 5
+            dot(g++,G,"black")
+            var G = 12 * g + 5
+            dot(h++,H,"black")
+            var H = 13 * h + 5
+
+        }
+
+        var x = 0
+        var y = 4 * x + 5
+        for(var i = 0; i < 999999; i = i + 1){
+            dot(x++,y,"black")
+           
+        }
+    </script>
+    <script>
+        var x = 0
+        var a = 1
+        var b = 1
+        for(var i = 0; i < 9999; i = i + 1){
+            dot(x++,y,"pink")
+            var y = 5 * x + 5
+            dot(a++,A,"black")
+            var A = 6 * a + 5
+            dot(b++,B,"red")
+            var B = 7 * b + 5
+            
+        }
+    </script>
