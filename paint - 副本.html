@@ -66,8 +66,14 @@
   // 在 坐标 (42, 42) 画出一个点
     dot (42,42,"red")
     //画一条实线
+    var y = 9
+    for(var x = 0; x < 99; x = x + 1){
+      
+            dot(x,y + 2,"red")
+        }
+    //画一条实线
         var x = 0
-        var y = 4 * x + 5
+        var y = 2 * x + 5
         for(var i = 0; i < 99; i = i + 1){
             dot(x++,y,"black")
         }
@@ -95,24 +101,54 @@
         var x = 0
          
         for(var i = 0; i < 999; i = i + 1){
-            dot(x++,y,"black")
+            dot(x++,y,"aqua")
             var y =  x
         }
        // 画一条30度的斜线（与x轴或y轴的夹角呈30度）
        var x = 0
          
         for(var i = 0; i < 999; i = i + 1){
-            dot(x++,y,"black")
+            dot(x++,y,"tan")
             var y = 0.6 * x
         }
+        // 画一条60度的斜线（与x轴或y轴的夹角呈60度）
+        for(var y = 0; y < 999; y = y + 1) {
+          var x = y * Math.sqrt(3) / 3
+          dot(x,y,"pink")
+        }
         //画一条跨越画布左上角和右下角的对角线
-        var x = 0
+       
         
-        for(var i = 0; i < 999; i = i + 1){
+        for(var x = 0; x < 999; x = x + 1){
           var y = 0.8 * x
-            dot(x++,y,"black")
+            dot(x,y,"black")
             
         }
+
+
+
+
+
+       // var ax =
+       // var ay = 
+       // var bx = 
+       // var by =
+
+       // var dx = Math.abs(ax - bx)
+        //var dy = Math.abs(ay - by)
+       // if (dx > dy) {
+        //  var x = ax
+        //  var y = ay
+         // for (var x = ax; x <=bx; x++) {
+          //  dot(x,y,"black")
+          //  yp += dy
+          ///  if (yp > dx) {
+        //    y++
+        //    yp -= dx
+         // }
+       //   }
+         
+       // }
         //画一个空心矩形
         var x = 150
         var y = 100
@@ -144,5 +180,61 @@
           y++
          }
         }
+      //  * 画两个个空心的圆，居中：
+       // * 一个半径为50像素
+       for (var x = -50; x <= 50; x++) {
+        var y = Math.sqrt(2500 -x * x)
+        dot(x + 300, y + 300,'green')
+        dot(x + 300, -y + 300,'green')
+        
+
+       } 
+       for (var y = -50; y <= 50; y++) {
+        var x = Math.sqrt(2500 -y * y)
+        dot(-x + 300, y + 300,'red')
+        dot(x + 300, y + 300,'red')
+        
+
+       } 
+       // * 一个半径为200像素
+     // * 画一个实心的圆，半径至少为100像素
+     // * 画一个【大小合适】的sin(x)的图像
+     for (var x =0; x < 1000; x++) {
+          var y = 8 *Math.sin( x / 8)
+          dot(x, y + 100,'green')
+        }
+    // * 画出rgb色彩空间的某一面（尺寸要大于100x100）
+     //    'rgb(255,255,0)'
+     //    '#ff00ff'
+     for (var y = 50; y < 100; y++) {
+      for (var x = 50; x < 100; x++) {
+        var color = 'rgb('+ x * 2.55 + ',255,' + y * 2.55 +')'
+        var xx = y
+        var yy = x
+        
+        dot(x,y,color)
+      }
+     }
+
+     var r = 150
+     var x = 0
+     var y = r
+    while (x <= y) {
+      dot (x + 200, y + 200, 'green')
+      dot (-x + 200, y + 200, 'green')
+      dot (x + 200, -y + 200, 'green')
+      dot (-x + 200, -y + 200, 'green')
+      dot (y + 200, x + 200, 'green')
+      dot (-y + 200, x + 200, 'green')
+      dot (y + 200,- x + 200, 'green')
+      dot (-y + 200, -x + 200, 'green')
+      x++
+      var d1 = x * x + y * y
+      var d2 = x * x + (y - 1) * (y - 1)
+      if (Math.abs(d1 - r * r) > Math.abs(d2 - r * r) ){
+        y--
+      }
+    }
+
 </script>
 </html>
