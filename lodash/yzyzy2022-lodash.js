@@ -13,6 +13,15 @@ var yzyzy2022 = {
         result.shift()
         return result
     }
+,
+    compact:function (arry) {
+        var result = []
+        for (var i = 0; i < arry.length; i++) {
+            if (arry[i]) {
+                result.push(arry[i])
+            }
+        }
+        return result
+    }
 
-    
 }
