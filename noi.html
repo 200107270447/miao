@@ -619,9 +619,10 @@
 <script type="" id="ch0105/14">
   var population = Number (prompt())
   var year = Number (prompt())
-xear; i = i + 1){
+  for (var i = 0; i < year; i++) {
     population = population * 1.001
   }
+  
   console.log(population.toFixed(4))
 </script>
 
@@ -637,20 +638,22 @@ xear; i = i + 1){
 </script>
 
 <script type="x" id="ch0105/16">
+  debugger
   var salary = Number (prompt())
-  var K = Number (prompt())
+  var k = Number (prompt())
   var p = 1 + k / 100
   var housePrice = 200
   var totalSalary = 0
   var 买了 = false 
   for (var i = 1; i <= 20 ;i++){
-    housePrice = housePrice * p
+   
     totalSalary += salary 
     if (totalSalary >= housePrice){
       买了 = true
       console.log(i)
       break
     }
+    housePrice = housePrice * p
   }
   if(!买了){
     console.log("Impossible")
@@ -916,6 +919,7 @@ for (var x = 81; x <= 342; x++){
 </script>
 
 <script type="x" id="ch0105/30">
+  debugger
   var m = Number(prompt())
   var M = m
   var k = Number(prompt())
@@ -930,7 +934,7 @@ for (var x = 81; x <= 342; x++){
     m = (m - d) / 10
   }
 
-  if (count === k && M % 19 !== 0) {
+  if (count === k && M % 19 == 0) {
     console.log('YES')
   } else {
     console.log('NO')
