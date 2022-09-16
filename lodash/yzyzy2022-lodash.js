@@ -25,7 +25,7 @@ var yzyzy2022 = {
     },
     
 
-    drop: function (array,n) {
+    drop: function (array,n=1) {
         var result = []
         if (n > array.length) {
             return []
@@ -56,7 +56,7 @@ var yzyzy2022 = {
         for (var i = 0; i < array.length; i++) {
             var it = array[i]
             if (Array.isArray(it)) {
-                for (var j = 0; j < array.length; j++) {
+                for (var j = 0; j < it.length; j++) {
                     result.push(it[j])
                 }
             } else {
