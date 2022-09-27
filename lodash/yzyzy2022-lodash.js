@@ -128,12 +128,15 @@ var yzyzy2022 = {
     join:function (array, separator=',') {
         res = ''
         for (var i = 0; i < array.length;i++) {
-            res += array[i] + separator
+            res += array[i] 
+            if (i < array.length -1) {
+                res += separator
+            }
         }
         return res
     },
     last:function (array) {
-        return array.length - 1
+        return array[array.length - 1]
     },
 
     head :function (array) {
