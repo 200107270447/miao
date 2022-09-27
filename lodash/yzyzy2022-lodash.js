@@ -115,6 +115,16 @@ var yzyzy2022 = {
         }
         return -1
     },
+
+    lastIndexOf: function(array, value, fromIndex=array.length-1) {
+        for (var i = array.length - 1; i >= 0; i--) {
+            if(array[i] === value) {
+                return i
+               }
+        }
+        return -1
+    },
+    
     join:function (array, separator=',') {
         res = ''
         for (var i = 0; i < array.length;i++) {
