@@ -97,7 +97,7 @@ var yzyzy2022 = {
             var it = array[i]
             if (Array.isArray(it)) {
                 var item = flattenDepth(it,depth - 1)
-                for (var j = 0; j < it.length; j++) {
+                for (var j = 0; j < item.length; j++) {
                     result.push(item[j])
                 }
             } else {
