@@ -38,8 +38,16 @@ var yzyzy2022 = {
         return result
     },
 
+    dropRight: function (array,n = 1) {
+        var result = []
+       
+        for (var i = 0; i < array.length - n; i++) {
+            result.push(array[i])
+        }
+        return result
+    },
 
-    fill: function (ary,vu,st = 0,ed = ary.length) {
+    fill: function (ary,vu,st = 0, ed = ary.length) {
        
         for (var i = st; i < ed; i++) {
             
@@ -80,7 +88,52 @@ var yzyzy2022 = {
         return result
     },
 
-    
+    flattenDepth: function flattenDepth(array, depth=1) {
+        if (depth == 0) {
+            return array.slice()
+        }
+        var result = []
+        for (var i = 0; i < array.length; i++) {
+            var it = array[i]
+            if (Array.isArray(it)) {
+                var item = flattenDepth(it,depth - 1)
+                for (var j = 0; j < it.length; j++) {
+                    result.push(item[j])
+                }
+            } else {
+                result.push(it)
+            }
+        }
+        return result
+    },
+
+    indexOf: function (array, value, fromIndex = 0) {
+        for (var i = fromIndex; i < array.length; i++) {
+           if(array[i] === value) {
+            return i
+           }
+        }
+        return -1
+    },
+    join:function (array, separator=',') {
+        res = ''
+        for (var i = 0; i < array.length;i++) {
+            res += array[i] + separator
+        }
+        return res
+    },
+    last:function (array) {
+        return array.length - 1
+    },
+
+    head :function (array) {
+        if (array.length == 0) {
+            return undefined
+        } else {
+            return array[0]
+        }
+       
+    }
 }
 
 
