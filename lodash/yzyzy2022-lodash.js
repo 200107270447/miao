@@ -117,7 +117,7 @@ var yzyzy2022 = {
     },
 
     lastIndexOf: function(array, value, fromIndex=array.length-1) {
-        for (var i = array.length - 1; i >= 0; i--) {
+        for (var i = fromIndex; i >= 0; i--) {
             if(array[i] === value) {
                 return i
                }
