@@ -146,6 +146,43 @@ var yzyzy2022 = {
             return array[0]
         }
        
+    },
+
+    frompairs :function(pairs) {
+        var obj = {}
+        for (let item in pairs) {
+            key = item[0]
+            val = item[1]
+            obj[key] = val
+        }
+        return obj
+    },
+
+    initial: function(array) {
+        var res = []
+        for (var i = 0; i < array.length - 1; i++) {
+            res.push(array[i])
+        }
+        return res
+    },
+
+    pull:function(array, ...val) {
+        var res = []
+        for(var i = 0; i < array.length; i++) {
+            if (!(val.includes(array[i]))) {
+                res.push(array[i])
+            }
+            
+        }
+        return res
+    },
+
+    reverse:function(array) {
+        var res = []
+        for (var i = array.length - 1; i >= 0; i--) {
+            res.push(array[i])
+        }
+        return res
     }
 }
 
@@ -164,3 +201,4 @@ var yzyzy2022 = {
 
 
 
+ 
