@@ -183,7 +183,13 @@ var yzyzy2022 = {
             res.push(array[i])
         }
         return res
-    }
+    },
+
+sortedIndex:function(array, value) {
+    
+}
+
+
 }
 
 
